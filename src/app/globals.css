@@ -5,3 +5,80 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Fancy RTE styles */
+.rte-page {
+  max-width: 900px;
+  margin: 48px auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,255,0.9));
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(16,24,40,0.08);
+}
+
+.rte-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(245,246,250,0.6));
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.rte-toolbar-left, .rte-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rte-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.rte-video-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+  margin: 12px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.rte-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.rte-page img {
+  max-width: 100%;
+  border-radius: 12px;
+  display: block;
+  margin: 12px 0;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+
+.rte-page .rte-figure-caption {
+  font-size: 0.9rem;
+  color: #444;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.rte-page.drag-hover {
+  outline: 2px dashed rgba(59,130,246,0.6);
+  background: linear-gradient(180deg, rgba(240,248,255,0.6), rgba(255,255,255,0.6));
+}
+
+/* Small responsive tweaks */
+@media (max-width: 640px) {
+  .rte-page { margin: 20px; padding: 12px; }
+  .rte-toolbar { flex-direction: column; align-items: stretch; }
+}
